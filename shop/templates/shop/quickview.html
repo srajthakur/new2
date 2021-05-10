@@ -1,0 +1,52 @@
+{% extends 'shop/basic.html' %}
+{% block title%} {{xv.pname}} {% endblock %}
+
+{% block body %}
+<style>
+.container card text-white bg-dark{
+  border: 1px solid black;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  margin-right: 150px;
+  margin-left: 150px;
+  background-color: lightblue;
+}
+</style>
+<span class="border border-6 border-dark">
+<div class="container card text-white bg-dark my-10">
+
+    <div class="row">
+        <div class="col md-4">
+            <img src="/media/{{xv.image}}" width="400">
+        </div>
+        <div class="col md-8">
+            <h1>{{xv.pname}}</h1>
+          <p>Painting is the practice of applying paint, pigment, color or other medium to a solid surface (called the "matrix" or "support").[1] The medium is commonly applied to the base with a brush, but other implements, such as knives, sponges, and airbrushes, can be used.
+
+In art, the term painting describes both the act and the result of the action (the final work is called "a painting")</p>
+        <div class=" row align-items-end d-grid gap-2" >
+
+            <br> <br>
+              <p><h4>Price {{xv.price}}Rs</h4></p>
+              <br>
+              <br> <br>
+
+                 <form action="" method="post">{% csrf_token %}
+              <button class="btn btn-light  me-md-2" type="button">Buy</button>
+              <button   id="{{myid}}" name="id" class="btn btn-light cart" type="submit">Add to Cart</button>
+                 </form>
+
+</div>
+
+        </div>
+    </div>
+
+</div>
+</span>
+
+
+
+{% endblock %}
+
+
+
