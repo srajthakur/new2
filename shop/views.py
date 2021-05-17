@@ -13,7 +13,7 @@ from django.contrib import messages
 import xlwt
 
 
-
+global uid
 
 def login(request):
 
@@ -62,7 +62,7 @@ def info(request):
 
 def Home(request,myid):
 
-    global uid
+    
     uid = myid
     c = Cart.objects.filter(uid=uid)
     n = len(c)
