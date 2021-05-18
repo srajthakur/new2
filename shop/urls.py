@@ -19,6 +19,6 @@ urlpatterns = [
     path("su/",views.su,name="su"),
     path("loginfo/",views.loginfo,name="loginfo"),
     path("productinfo/",views.productinfo,name="productinfo"),
-    path("Home/<int:myid>",views.Home,name="Home"),
-    path("Home1/",views.Home1,name="Home1")
+    path("Home/<int:myid>",views.Home,name="Home")
+   
 ]
